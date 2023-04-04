@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Surreal Estate - Property Search Engine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Surreal Estate is a web application built with React that allows users to search for different properties, add new properties, and view property details. This README file provides an overview of the application and instructions on how to run it locally.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with Surreal Estate, you should first clone the repository from GitHub:
+
+### `git clone https://github.com/your-username/surreal-estate.git`
+
+Once you have cloned the repository, you can install the necessary dependencies by running:
+
+### `npm install`
+
+To start the application, run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application should open automatically in your default web browser at `http://localhost:3000`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pages
 
-### `npm test`
+Surreal Estate has three main pages:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Listings Page
 
-### `npm run build`
+The listings page allows users to search for different properties and sort/filter the results. Users can filter properties by location, price, and number of bedrooms.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Add Property Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The add property page allows users to add new properties to the database. Users can enter the property details, such as the title, location, price, and number of bedrooms, and upload photos of the property.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Property Page
 
-### `npm run eject`
+The property page displays the details of a single property. Users can view the property photos, description, location, price, and other details.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Surreal Estate uses the following dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* React
+* React Router
+* Axios
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+If you would like to contribute to Surreal Estate, please open a pull request on GitHub. We welcome contributions from all developers, whether you are a beginner or an experienced developer.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Surreal Estate is open source software licensed under the MIT license.
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Abi Turner
