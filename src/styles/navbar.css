@@ -1,0 +1,34 @@
+.nav-bar {
+    background-color: white;
+    border-bottom: 5px solid grey;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.nav-bar img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links-item {
+    display: inline-block;
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.item {
+    display: inline-block;
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 20px;
+
+}

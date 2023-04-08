@@ -1,12 +1,18 @@
 import "../styles/app.css";
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import NavBar from "./NavBar";
+import Properties from "./Properties";
+import AddProperty from "./AddProperty";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>Surreal Estate</h2>
-      </header>
+      <NavBar />
+      <Routes>
+        <Route path="/properties" element={<Properties />} />
+        <Route path="/add-property" element={<AddProperty />} />
+      </Routes>
     </div>
   );
 };
