@@ -9,15 +9,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/property-card.css";
 
-const PropertyCard = ({
-  title,
-  type,
-  bathrooms,
-  bedrooms,
-  price,
-  city,
-  email,
-}) => {
+const PropertyCard = ({ property }) => {
+  const { title, type, bathrooms, bedrooms, price, city, email } = property;
+
   return (
     <div className="property-card">
       <h2>{title}</h2>

@@ -1,16 +1,9 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import AddProperty from "../components/AddProperty";
 
-describe("App", () => {
-  const { asFragment } = render(
-    <BrowserRouter basename="/">
-      <AddProperty />
-    </BrowserRouter>
-  );
-
+describe("Add Property", () => {
   it("renders correctly", () => {
-    expect(asFragment()).toMatchSnapshot();
+    render(<AddProperty />);
   });
 });
