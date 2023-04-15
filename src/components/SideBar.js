@@ -24,6 +24,7 @@ const SideBar = () => {
 
   return (
     <div className="sidebar">
+      <h4>Filter by City</h4>
       {cities.map((city) => (
         <Link key={city} to={buildQueryString("query", { city })}>
           {city}

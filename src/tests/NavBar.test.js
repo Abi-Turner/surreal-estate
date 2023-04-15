@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
-describe("App", () => {
+describe("NavBar", () => {
   const { asFragment } = render(
     <BrowserRouter basename="/">
       <NavBar />

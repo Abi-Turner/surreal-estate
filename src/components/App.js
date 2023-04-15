@@ -12,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/properties" element={<Properties />} />
         <Route path="/add-property" element={<AddProperty />} />
+        <Route path="/*" element={<Properties />} />
       </Routes>
     </div>
   );

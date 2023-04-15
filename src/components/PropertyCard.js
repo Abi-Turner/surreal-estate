@@ -4,7 +4,7 @@ import {
   faBath,
   faMapMarkerAlt,
   faEnvelope,
-  faMoneyBillAlt,
+  faSterlingSign,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/property-card.css";
@@ -26,7 +26,7 @@ const PropertyCard = ({ property }) => {
         <FontAwesomeIcon icon={faMapMarkerAlt} /> {city}
       </p>
       <p>
-        <FontAwesomeIcon icon={faMoneyBillAlt} /> {price}
+        <FontAwesomeIcon icon={faSterlingSign} /> {price}
       </p>
       <p>
         <FontAwesomeIcon icon={faEnvelope} /> {email}
