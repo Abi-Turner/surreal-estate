@@ -12,7 +12,7 @@ const Properties = () => {
     axios
       .get("http://localhost:4000/api/v1/PropertyListing")
       .then((response) => setProperties(response.data))
-      .catch((error) => {
+      .catch(() => {
         setAlert({ message: "Error retriecing properties." });
       });
   }, []);
