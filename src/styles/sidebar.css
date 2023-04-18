@@ -22,3 +22,28 @@
   .main-content {
     margin-left: 200px; /* This should be the same as the width of the side bar */
   }
+
+  .sidebar form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar form input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .sidebar form button {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }

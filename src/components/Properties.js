@@ -22,7 +22,7 @@ const Properties = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/v1/PropertyListing${search}`)
+      .get(`http://localhost:4000/api/v1/PropertyListing/${search}`)
       .then(({ data }) => setProperties(data))
       // eslint-disable-next-line no-console
       .catch((err) => console.log(err));
