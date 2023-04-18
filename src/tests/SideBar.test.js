@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import SideBar from "../components/SideBar";
@@ -10,5 +10,16 @@ describe("SideBar", () => {
         <SideBar />
       </MemoryRouter>
     );
+  });
+
+  it("updates the query state when the user types in the input field", () => {
+    const { getByRole } = render(
+      <MemoryRouter>
+        <SideBar />
+      </MemoryRouter>
+    );
+    const input = getByRole("textbox");
+    fireEvent.change(input, { target: { value: "test input" } });
+    expect(input.value).toBe("test input");
   });
 });
