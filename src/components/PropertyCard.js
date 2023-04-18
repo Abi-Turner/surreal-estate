@@ -15,7 +15,7 @@ const PropertyCard = ({ property }) => {
   return (
     <div className="property-card">
       <h2>{title}</h2>
-      <p>{type}</p>
+      <p className="property-type">{type}</p>
       <p>
         <FontAwesomeIcon icon={faBed} /> {bedrooms} bedrooms
       </p>
@@ -28,9 +28,20 @@ const PropertyCard = ({ property }) => {
       <p>
         <FontAwesomeIcon icon={faSterlingSign} /> {price}
       </p>
-      <p>
-        <FontAwesomeIcon icon={faEnvelope} /> {email}
-      </p>
+      <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
+        <span>
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            size="1x"
+            style={{
+              backgroundColor: "purple",
+              padding: "10px",
+              borderRadius: "90%",
+              color: "white",
+            }}
+          />
+        </span>
+      </a>
     </div>
   );
 };

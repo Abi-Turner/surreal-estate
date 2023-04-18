@@ -8,3 +8,8 @@
     width: 33vh;
     background-color: #fefefe;
   }
+
+  .property-type {
+    font-style: italic;
+    text-transform: capitalize;
+  }
