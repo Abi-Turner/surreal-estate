@@ -1,34 +1,85 @@
-.nav-bar {
+ .nav-bar {
     background-color: white;
     border-bottom: 5px solid grey;
     display: flex;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between; 
 
-}
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
 
-.nav-bar img {
+  .logo {
+    height: 50px;
+    margin-right: 0.5px;
+  }
+  
+  .surreal-estate {
+    margin: 0;
+  }
+  
+  .nav-bar img {
     height: 50px;
     margin-right: 10px;
-}
-
-.navbar-links {
+  }
+  
+  .navbar-links {
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
+  
+  .navbar-links-item {
+    display: inline-block;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 20px;
+    justify-content: space-between;
+    
+  }
 
-.navbar-links-item {
+  .navbar-links-item a:link {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navbar-links-item a:visited {
+    color: #333;
+    text-decoration: none;
+  }
+
+  
+  .item {
     display: inline-block;
     margin: 0;
     padding-left: 50px;
     padding-right: 20px;
-}
-
-.item {
+  }
+  
+  .facebook-login-btn {
     display: inline-block;
-    margin: 0;
-    padding-left: 50px;
-    padding-right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .facebook-login-btn:hover {
+    background-color: darkblue;
+  }
 
-}
+  .h3 {
+    justify-self: left;
+  }
+  

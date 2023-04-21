@@ -5,12 +5,24 @@ import {
   faMapMarkerAlt,
   faEnvelope,
   faSterlingSign,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/property-card.css";
 
 const PropertyCard = ({ property }) => {
-  const { title, type, bathrooms, bedrooms, price, city, email } = property;
+  const {
+    _id,
+    title,
+    type,
+    bathrooms,
+    bedrooms,
+    price,
+    city,
+    email,
+    onSaveProperty,
+    userID,
+  } = property;
 
   return (
     <div className="property-card">
@@ -42,6 +54,16 @@ const PropertyCard = ({ property }) => {
           />
         </span>
       </a>
+      {userID && (
+        <button
+          type="button"
+          onClick={() => onSaveProperty(_id)}
+          className="save"
+        >
+          <FontAwesomeIcon icon={faStar} />
+          <span>Save</span>
+        </button>
+      )}
     </div>
   );
 };

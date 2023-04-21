@@ -6,10 +6,17 @@ import Alert from "./Alert";
 import SideBar from "./SideBar";
 import "../styles/properties.css";
 
-const Properties = () => {
+const Properties = ({ userID }) => {
   const [properties, setProperties] = useState([]);
   const [alert, setAlert] = useState({ message: "" });
   const { search } = useLocation();
+
+  const handleSaveProperty = (propertyId) => {
+    axios.post("http://localhost:4000/api/v1/Favourite", {
+      propertyListing: propertyId,
+      fbUserId: userID,
+    });
+  };
 
   useEffect(() => {
     axios
@@ -30,7 +37,11 @@ const Properties = () => {
 
   const propertyCards = properties.map((property) => (
     <div key={property.id} className="item">
-      <PropertyCard property={property} />
+      <PropertyCard
+        property={property}
+        userID={userID}
+        onSave={() => handleSaveProperty(property.id)}
+      />
     </div>
   ));
 
