@@ -5,11 +5,20 @@ exports[`NavBar renders correctly 1`] = `
   <div
     class="nav-bar"
   >
-    <img
-      alt="logo-icon"
-      src="logo.png"
-    />
-    Surreal Estate
+    <div
+      class="logo-container"
+    >
+      <img
+        alt="logo-icon"
+        class="logo"
+        src="logo.png"
+      />
+      <h3
+        class="surreal-estate"
+      >
+        Surreal Estate
+      </h3>
+    </div>
     <ul
       class="navbar-links"
     >
@@ -33,7 +42,22 @@ exports[`NavBar renders correctly 1`] = `
           Add a Property
         </a>
       </li>
+      <li
+        class="navbar-links-item"
+      >
+        <a
+          class="item"
+          href="/saved-properties"
+        >
+          Saved Properties
+        </a>
+      </li>
     </ul>
+    <div
+      class="facebook-login"
+    >
+      <div />
+    </div>
   </div>
 </DocumentFragment>
 `;

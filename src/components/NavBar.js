@@ -5,12 +5,6 @@ import FacebookLogin from "react-facebook-login";
 import logo from "../images/logo.png";
 
 const NavBar = ({ onLogin, onLogout, userID }) => {
-  const handleLogout = () => {
-    window.FB.logout(() => {
-      onLogout();
-    });
-  };
-
   return (
     <div className="nav-bar">
       <div className="logo-container">
@@ -28,34 +22,30 @@ const NavBar = ({ onLogin, onLogout, userID }) => {
             Add a Property
           </Link>
         </li>
-        {userID ? (
-          <li className="navbar-links-item">
-            <button className="item" type="button" onClick={handleLogout}>
-              Sign Out
-            </button>
-          </li>
-        ) : (
-          <li className="navbar-links-item">
-            <FacebookLogin
-              className="facebook-login-btn"
-              appId={188012377415038}
-              fields="name,email,picture"
-              callback={onLogin}
-              icon="fa-facebook"
-              render={(renderProps) => (
-                <button
-                  className="item"
-                  type="button"
-                  onClick={renderProps.onClick}
-                >
-                  Login with Facebook
-                </button>
-              )}
-              onLogin={onLogin}
-            />
-          </li>
-        )}
+        <li className="navbar-links-item">
+          <Link className="item" to="/saved-properties">
+            Saved Properties
+          </Link>
+        </li>
       </ul>
+      <div className="facebook-login">
+        {userID ? (
+          <button
+            type="submit"
+            className="button-fb-signout"
+            onClick={onLogout}
+          >
+            Sign Out
+          </button>
+        ) : (
+          <FacebookLogin
+            appId="188012377415038"
+            callback={onLogin}
+            icon="fa-facebook"
+            autoLoad
+          />
+        )}
+      </div>
     </div>
   );
 };

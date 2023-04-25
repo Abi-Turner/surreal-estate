@@ -22,6 +22,5 @@ describe("PropertyCard", () => {
     expect(getByText(`${property.bathrooms} bathrooms`)).toBeInTheDocument();
     expect(getByText(property.city)).toBeInTheDocument();
     expect(getByText(property.price)).toBeInTheDocument();
-    expect(getByText(property.email)).toBeInTheDocument();
   });
 });

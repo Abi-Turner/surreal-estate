@@ -14,12 +14,12 @@ const PropertyCard = ({ property }) => {
   const {
     _id,
     title,
-    type,
-    bathrooms,
     bedrooms,
+    bathrooms,
     price,
-    city,
     email,
+    type,
+    city,
     onSaveProperty,
     userID,
   } = property;

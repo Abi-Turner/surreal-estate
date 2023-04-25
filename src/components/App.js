@@ -14,7 +14,7 @@ const App = () => {
   };
 
   const handleLogout = () => {
-    window.fdescribe.logout(() => setUserID(""));
+    window.FB.logout(() => setUserID(""));
   };
 
   return (
@@ -23,7 +23,10 @@ const App = () => {
       <Routes>
         <Route path="/properties" element={<Properties userID={userID} />} />
         <Route path="/add-property" element={<AddProperty />} />
-        <Route path="/saved-properties" element={<SavedProperties />} />
+        <Route
+          path="/saved-properties"
+          element={<SavedProperties userID={userID} />}
+        />
         <Route path="/*" element={<Properties userID={userID} />} />
       </Routes>
     </div>

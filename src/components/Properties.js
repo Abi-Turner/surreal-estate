@@ -12,10 +12,21 @@ const Properties = ({ userID }) => {
   const { search } = useLocation();
 
   const handleSaveProperty = (propertyId) => {
-    axios.post("http://localhost:4000/api/v1/Favourite", {
-      propertyListing: propertyId,
-      fbUserId: userID,
-    });
+    axios
+      .post("http://localhost:4000/api/v1/Favourite", {
+        propertyListing: propertyId,
+        fbUserId: userID,
+      })
+      .then(() => {
+        setAlert({
+          message: "Property Saved!",
+        });
+      })
+      .catch(() => {
+        setAlert({
+          message: "Error. Please try again later.",
+        });
+      });
   };
 
   useEffect(() => {
@@ -36,20 +47,19 @@ const Properties = ({ userID }) => {
   }, [search]);
 
   const propertyCards = properties.map((property) => (
-    <div key={property.id} className="item">
+    <div className="item">
       <PropertyCard
         property={property}
         userID={userID}
-        onSave={() => handleSaveProperty(property.id)}
+        onSaveProperty={() => handleSaveProperty(property._id)}
       />
     </div>
   ));
 
   return (
-    <div className="properties">
+    <div className="properties" key="properties">
       <SideBar />
       <div className="main-content">
-        <h1>Properties Page</h1>
         {alert.message && <Alert message={alert.message} />}
         {propertyCards}
       </div>
